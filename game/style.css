@@ -1,0 +1,83 @@
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; background: #241a12; }
+body {
+  font-family: "Trebuchet MS", Verdana, sans-serif;
+  color: #2b2118;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#wrap { position: relative; width: 1280px; max-width: 100vw; }
+#game { display: block; width: 100%; height: auto; background: #e8dcc4; }
+.hidden { display: none !important; }
+
+#hud {
+  position: absolute;
+  top: 74px;
+  right: 12px;
+  display: flex;
+  gap: 8px;
+  z-index: 5;
+}
+#hud button {
+  font: inherit;
+  font-size: 14px;
+  font-weight: bold;
+  color: #ffe9b0;
+  background: rgba(43, 33, 24, 0.85);
+  border: 2px solid #8a6d4b;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+#hud button:hover { background: #4a3826; border-color: #f7c948; }
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(24, 16, 10, 0.72);
+  z-index: 10;
+}
+.panel {
+  width: 640px;
+  max-width: 92%;
+  max-height: 92%;
+  overflow-y: auto;
+  background: #f7efdc;
+  border: 4px solid #8a5a2b;
+  border-radius: 16px;
+  padding: 28px 34px;
+  text-align: center;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.5);
+}
+.panel h1 { margin: 0 0 4px; font-size: 52px; letter-spacing: 2px; color: #a83c1e; }
+.panel h1 span { color: #e8a13a; font-size: 34px; }
+.panel h2 { margin: 0 0 12px; font-size: 32px; color: #a83c1e; }
+.panel h3 { margin: 18px 0 6px; font-size: 18px; color: #6b4a35; text-align: left; }
+.tagline { font-size: 18px; font-weight: bold; color: #6b4a35; margin: 0 0 12px; }
+.brief { font-size: 15px; line-height: 1.5; margin: 0 0 18px; }
+.keys { font-size: 13px; color: #6b5b45; margin: 14px 0 0; line-height: 1.5; }
+.fine { font-size: 12px; color: #8a7a63; margin: 8px 0 0; }
+.panel table { width: 100%; border-collapse: collapse; text-align: left; font-size: 14px; }
+.panel td { padding: 5px 6px; vertical-align: top; line-height: 1.4; }
+.panel td:first-child { white-space: nowrap; width: 110px; }
+#end-stats p { margin: 6px 0; font-size: 16px; line-height: 1.5; }
+.row { display: flex; gap: 12px; justify-content: center; margin-top: 16px; }
+button.big {
+  font: inherit;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: #a83c1e;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 26px;
+  cursor: pointer;
+}
+button.big:hover { background: #c14a26; }
+button.big.ghost { background: #6b4a35; }
+button.big.ghost:hover { background: #7d5a41; }

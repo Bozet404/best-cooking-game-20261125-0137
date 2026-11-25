@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sizzle &amp; Serve — a tiny kitchen rush</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="wrap">
+  <canvas id="game" width="1280" height="720"></canvas>
+
+  <div id="hud" class="hidden">
+    <button id="btn-pause" type="button">Pause</button>
+    <button id="btn-mute" type="button">Sound on</button>
+    <button id="btn-restart" type="button">Restart</button>
+  </div>
+
+  <div id="menu" class="overlay">
+    <div class="panel">
+      <h1>SIZZLE <span>&amp;</span> SERVE</h1>
+      <p class="tagline">A tiny kitchen rush — take orders, chop, grill, plate, serve.</p>
+      <p class="brief">Orders land on the board up top. Run the kitchen: grab
+      ingredients from the counters, chop lettuce and tomato at the board,
+      grill patties on the stove, build each dish on the plating counter,
+      and serve it at the window before the customer walks out. One day,
+      three minutes, three hearts.</p>
+      <div class="row">
+        <button id="btn-start" type="button" class="big">Start cooking</button>
+        <button id="btn-how" type="button" class="big ghost">How to play</button>
+      </div>
+      <p class="keys">Move: WASD / arrows / click the floor &nbsp;•&nbsp; Use a station: E or click it
+      &nbsp;•&nbsp; Hold E to chop &amp; wash &nbsp;•&nbsp; P pause &nbsp;•&nbsp; M mute &nbsp;•&nbsp; R restart</p>
+      <p class="fine">An original game. No network, no accounts, no purchases — just a kitchen.</p>
+    </div>
+  </div>
+
+  <div id="help" class="overlay hidden">
+    <div class="panel">
+      <h2>How to play</h2>
+      <table>
+        <tr><td><strong>Move</strong></td><td>WASD, arrow keys, or click the floor to walk there.</td></tr>
+        <tr><td><strong>Take food</strong></td><td>Stand by a counter and press E (or click it). You carry up to 3 things.</td></tr>
+        <tr><td><strong>Chop</strong></td><td>Carry raw lettuce or tomato to the Chopping Board and hold E.</td></tr>
+        <tr><td><strong>Grill</strong></td><td>Carry a raw patty to the Stove, press E to put it on. Take it off when the bar turns green — leave it and it burns.</td></tr>
+        <tr><td><strong>Plate</strong></td><td>At the Plating Counter, press E to add the item on top of your stack. When the plate matches an order, press E again to pick the plate up.</td></tr>
+        <tr><td><strong>Serve</strong></td><td>Carry the finished plate to the Serve Window and press E. Fast serves build a combo.</td></tr>
+        <tr><td><strong>Fix mistakes</strong></td><td>Trash Bin throws things away. The Sink washes a burnt patty back to raw (hold E).</td></tr>
+      </table>
+      <h3>The menu</h3>
+      <table>
+        <tr><td><strong>Classic Burger</strong></td><td>Bun + grilled patty + chopped lettuce — 18 coins</td></tr>
+        <tr><td><strong>Cheesy Melt</strong></td><td>Bun + grilled patty + cheese — 22 coins</td></tr>
+        <tr><td><strong>Garden Salad</strong></td><td>Chopped lettuce + chopped tomato — 12 coins</td></tr>
+        <tr><td><strong>Bruschetta</strong></td><td>Bun + chopped tomato + cheese — 16 coins</td></tr>
+      </table>
+      <p>Each order gives you 60 seconds. Let one expire and you lose a heart; lose all three hearts and the day ends early. The day lasts 3 minutes.</p>
+      <div class="row"><button id="btn-close-help" type="button" class="big">Got it</button></div>
+    </div>
+  </div>
+
+  <div id="end" class="overlay hidden">
+    <div class="panel">
+      <h2 id="end-title">Day complete</h2>
+      <div id="end-stats"></div>
+      <div class="row"><button id="btn-again" type="button" class="big">Cook another day</button></div>
+      <p class="keys">Tip: serve orders back-to-back to build a combo — up to double coins.</p>
+    </div>
+  </div>
+</div>
+<script src="src/config.js"></script>
+<script src="src/audio.js"></script>
+<script src="src/input.js"></script>
+<script src="src/kitchen.js"></script>
+<script src="src/render.js"></script>
+<script src="src/main.js"></script>
+</body>
+</html>
